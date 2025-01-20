@@ -1,5 +1,5 @@
 document.getElementById('fetchData').addEventListener('click', async () => {
-    const response = await fetch('https://chhfpnafjajancuedvpi.supabase.co/rest/v1/example_table?select=id,name,age', {
+    const response = await fetch('https://chhfpnafjajancuedvpi.supabase.co/rest/v1/example_table', {
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
