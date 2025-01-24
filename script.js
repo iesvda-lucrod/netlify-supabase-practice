@@ -18,7 +18,7 @@ document.getElementById('fetchData').addEventListener('click', async () => {
 
 const supabaseUrl = 'https://chhfpnafjajancuedvpi.supabase.co/rest/v1/example_table';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoaGZwbmFmamFqYW5jdWVkdnBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzczNjM5ODYsImV4cCI6MjA1MjkzOTk4Nn0.lo-uZsUYOpkmh3mUTDwb6_DgsUmBZb7-84UEnEjKt3A';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
