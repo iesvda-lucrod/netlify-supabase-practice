@@ -19,7 +19,7 @@ signUpButton.addEventListener('click', async () => {
     const password = passwordInput.value;
     const { user, error } = await supabase.auth.signUp({ email, password });
     if (error) {
-        alert(Error: ${error.message});
+        alert(`Error: ${error.message}`);
     } else {
         alert('Sign-up successful! Please check your email to confirm your account.');
     }
