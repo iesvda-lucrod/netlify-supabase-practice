@@ -31,7 +31,7 @@ logInButton.addEventListener('click', async () => {
     const password = passwordInput.value;
     const { user, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
-        alert(Error: ${error.message});
+        alert(`Error: ${error.message}`);
     } else {
         alert('Log in successful!');
         toggleAuthState(true);
@@ -42,7 +42,7 @@ logInButton.addEventListener('click', async () => {
 logOutButton.addEventListener('click', async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
-        alert(Error: ${error.message});
+        alert(`Error: ${error.message}`);
     } else {
         alert('Log out successful!');
         toggleAuthState(false);
@@ -53,7 +53,7 @@ logOutButton.addEventListener('click', async () => {
 fetchDataButton.addEventListener('click', async () => {
     const { data, error } = await supabase.from('example_table').select('*');
     if (error) {
-        dataDisplay.innerHTML = Error: ${error.message};
+        dataDisplay.innerHTML = `Error: ${error.message}`;
     } else {
         dataDisplay.innerHTML = <pre>${JSON.stringify(data, null, 2)}</pre>;
     }
