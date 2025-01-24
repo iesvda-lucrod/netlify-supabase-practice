@@ -55,7 +55,7 @@ fetchDataButton.addEventListener('click', async () => {
     if (error) {
         dataDisplay.innerHTML = `Error: ${error.message}`;
     } else {
-        dataDisplay.innerHTML = <pre>${JSON.stringify(data, null, 2)}</pre>;
+        dataDisplay.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
     }
 });
 
